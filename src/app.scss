@@ -1,0 +1,214 @@
+
+$primary-color: #0075ff;
+$danger-color: #eb5757;
+
+.header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+}
+.menu {
+  color: #6e8599;
+  display: flex;
+  .menu-item {
+    padding: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  .active {
+    color: $primary-color;
+  }
+}
+.content {
+  padding: 2rem 4rem;
+}
+
+.search {
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  .search-icon {
+    color: $primary-color;
+    padding: 20px;
+    font-size: 1.5rem;
+  }
+  .search-button {
+    background-color: $primary-color;
+    color: #fff;
+    font-weight: 500;
+    padding: 20px;
+    border-radius: 0px 10px 10px 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  .search-location, .search-contract, .search-money, .search-title {
+    border-left: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    color: #586e88;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+  }
+}
+
+.job-item {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  display: flex;
+  .company-logo {
+    margin-right: 2rem;
+    align-items: center;
+    display: flex;
+    .logo-wrapper {
+      text-align: center;
+    }
+    .logo-image {
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .company-size {
+      background-color: #fff2e5;
+      color: #ff9936;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: small;
+      font-weight: 500;
+      text-align: center;
+      cursor: default;
+    }
+  }
+  .company-details {
+    flex-grow: 1;
+    position: relative;
+    .company-name {
+      color: #97a7b2;
+      font-weight: 500;
+      font-size: small;
+    }
+    .job-name {
+      font-weight: bold;
+      font-size: 1.125rem;
+      padding: 5px 0;
+    }
+    .job-location {
+      color: #97a7b2;
+      font-weight: 500;
+      font-size: small;
+    }
+    .like, .liked {
+      position: absolute;
+      color: #dde0e5;
+      right: 0;
+      cursor: pointer;
+      .fa-heart {
+        font-size: 1.5rem;
+      }
+      &:hover {
+        color: $danger-color;
+        transform: scale(1.1);
+        transition-duration: 300ms;
+      }
+    }
+    .liked {
+      color: $danger-color;
+    }
+    .job-footer {
+      color: #97a7b2;
+      margin-top: 10px;
+      font-size: small;
+      .job-skill {
+        flex-grow: 1;
+        display: flex;
+        .skill-name {
+          background-color: #f7f8fa;
+          padding: 4px 10px;
+          border-radius: 4px;
+          margin-right: 8px;
+          cursor: pointer;
+          &:hover {
+            background-color: #97a7b2;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cover {
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  .cover-logo img {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: -25%;
+    border-radius: 50%;
+    left: 5%;
+  }
+}
+
+.cover-image {
+  border-radius: 10px 10px 0 0;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.share {
+  padding: 1rem 2rem 2rem 2rem;
+  text-align: right;
+}
+
+.btn-share {
+  border: 1px solid #eee;
+  color: #b9c8d0;
+  margin-left: 8px;
+  border-radius: 8px;
+}
+
+.summary {
+  border-bottom: 1px solid #eee;
+  font-weight: 500;
+  padding: 1rem 2rem;
+}
+
+.brand-name {
+  color: $primary-color;
+}
+
+.description {
+  color: #69808f;
+  padding: 2rem;
+  line-height: 1.875rem;
+}
+
+.dropdown-contract {
+  position: absolute;
+  bottom: -100%;
+  background-color: #fff;
+  z-index: 1;
+  width: 100%;
+  .dropdown-contract-item {
+    padding: 10px;
+    width: 100%;
+    &:hover {
+      background-color: #eee;
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .menu {
+    display: none;
+  }
+}
