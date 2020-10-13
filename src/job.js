@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 function Item(props) {
   const [like, setLike] = useState(false)
@@ -15,7 +15,7 @@ function Item(props) {
         </div>
       </div>
       <div className="company-details">
-        <div className={like ? "liked" : "like" } onClick={() => setLike(!like)}>
+        <div className={like ? "liked" : "like"} onClick={() => setLike(!like)}>
           <i className="fas fa-heart"></i>
         </div>
         <div className="company-name">
@@ -48,16 +48,44 @@ function Item(props) {
   )
 }
 
-function Job() {
+function Job(props) {
   return (
     <div className="job">
-      <Item company="Microsoft" title="Sr.Back-end Developer"/>
-      <Item company="Google" title="Full-Stack Developer"/>
-      <Item company="Amazone" title="User Experience Designer"/>
-      <Item company="Alibaba" title="Sr.User Interface Designer"/>
-      <Item company="Apple" title="Web Developer"/>
+      {
+        data.filter(x=>x.title.toLowerCase().includes(props.keyword.toLowerCase())).map(x =>
+          <Item company={x.company} title={x.title} key={x.id} />
+        )
+      }
     </div>
   );
 }
+
+const data = [
+  {
+    id: 1,
+    company: "Microsoft",
+    title: "Sr.Back-end Developer"
+  },
+  {
+    id: 2,
+    company: "Google",
+    title: "Full-Stack Developer"
+  },
+  {
+    id: 3,
+    company: "Amazone",
+    title: "User Experience Designer"
+  },
+  {
+    id: 4,
+    company: "Alibaba",
+    title: "Sr.User Interface Designer"
+  },
+  {
+    id: 5,
+    company: "Apple",
+    title: "Web Developer"
+  }
+]
 
 export default Job;

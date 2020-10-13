@@ -2,6 +2,10 @@
 $primary-color: #0075ff;
 $danger-color: #eb5757;
 
+.app {
+  overflow: hidden;
+}
+
 .header {
   background-color: #fff;
   display: flex;
@@ -45,7 +49,7 @@ $danger-color: #eb5757;
     font-size: 1.2rem;
     cursor: pointer;
   }
-  .search-location, .search-contract, .search-money, .search-title {
+  .search-location, .search-contract, .search-money, .search-keyword {
     border-left: 1px solid #eee;
     display: flex;
     align-items: center;
@@ -205,6 +209,24 @@ $danger-color: #eb5757;
       background-color: #eee;
     }
   }
+}
+
+.result {
+  .result-input {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.money-wrapper {
+  position: absolute;
+  background-color: white;
+  left: 0;
+  bottom: -90%;
+  z-index: 1;
+  padding: 20px;
+  width: 100%;
 }
 
 @media only screen and (max-width: 640px) {

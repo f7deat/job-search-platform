@@ -15,7 +15,7 @@ function Details() {
       <div className="share">
         <button className="btn btn-share" type="button"><i className="fas fa-check text-success"></i></button>
         <button className="btn btn-share" type="button"><i className="fas fa-share"></i></button>
-        <button className="btn btn-share" type="button" onClick={() => setLike(!like)}><i className={like ? "far fa-heart" : "far fa-heart text-danger" }></i></button>
+        <button className="btn btn-share" type="button" onClick={() => setLike(!like)}><i className={like ? "far fa-heart text-danger" : "far fa-heart" }></i></button>
       </div>
       <div className="summary">
         <div className="detail-name h3 mb-3 font-weight-bold">
